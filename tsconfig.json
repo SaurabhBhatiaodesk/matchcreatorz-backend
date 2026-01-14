@@ -1,0 +1,199 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/i18n-lib": [
+        "libs/i18n-lib/src"
+      ],
+      "@app/i18n-lib/*": [
+        "libs/i18n-lib/src/*"
+      ],
+      "@app/page-library": [
+        "libs/page-library/src"
+      ],
+      "@app/page-library/*": [
+        "libs/page-library/src/*"
+      ],
+      "@app/page-lib": [
+        "libs/page-lib/src"
+      ],
+      "@app/page-lib/*": [
+        "libs/page-lib/src/*"
+      ],
+      "@app/enquiry-lib": [
+        "libs/enquiry-lib/src"
+      ],
+      "@app/enquiry-lib/*": [
+        "libs/enquiry-lib/src/*"
+      ],
+      "@app/util-lib": [
+        "libs/util-lib/src"
+      ],
+      "@app/util-lib/*": [
+        "libs/util-lib/src/*"
+      ],
+      "@app/mail-lib": [
+        "libs/mail-lib/src"
+      ],
+      "@app/mail-lib/*": [
+        "libs/mail-lib/src/*"
+      ],
+      "@app/group-lib": [
+        "libs/group-lib/src"
+      ],
+      "@app/group-lib/*": [
+        "libs/group-lib/src/*"
+      ],
+      "@app/order-lib": [
+        "libs/order-lib/src"
+      ],
+      "@app/order-lib/*": [
+        "libs/order-lib/src/*"
+      ],
+      "@app/menu-lib": [
+        "libs/menu-lib/src"
+      ],
+      "@app/menu-lib/*": [
+        "libs/menu-lib/src/*"
+      ],
+      "@app/cuisine-lib": [
+        "libs/cuisine-lib/src"
+      ],
+      "@app/cuisine-lib/*": [
+        "libs/cuisine-lib/src/*"
+      ],
+      "@app/food-preference-lib": [
+        "libs/food-preference-lib/src"
+      ],
+      "@app/food-preference-lib/*": [
+        "libs/food-preference-lib/src/*"
+      ],
+      "@app/restaurant-lib": [
+        "libs/restaurant-lib/src"
+      ],
+      "@app/restaurant-lib/*": [
+        "libs/restaurant-lib/src/*"
+      ],
+      "@app/user-lib": [
+        "libs/user-lib/src"
+      ],
+      "@app/user-lib/*": [
+        "libs/user-lib/src/*"
+      ],
+      "@app/admin-setting-lib": [
+        "libs/admin-setting-lib/src"
+      ],
+      "@app/admin-setting-lib/*": [
+        "libs/admin-setting-lib/src/*"
+      ],
+      "@app/sub-order-lib": [
+        "libs/sub-order-lib/src"
+      ],
+      "@app/sub-order-lib/*": [
+        "libs/sub-order-lib/src/*"
+      ],
+      "@app/tag-lib": [
+        "libs/tag-lib/src"
+      ],
+      "@app/tag-lib/*": [
+        "libs/tag-lib/src/*"
+      ],
+      "@app/resource-lib": [
+        "libs/resource-lib/src"
+      ],
+      "@app/resource-lib/*": [
+        "libs/resource-lib/src/*"
+      ],
+      "@app/buyer-lib": [
+        "libs/buyer-lib/src"
+      ],
+      "@app/buyer-lib/*": [
+        "libs/buyer-lib/src/*"
+      ],
+      "@app/seller-lib": [
+        "libs/seller-lib/src"
+      ],
+      "@app/seller-lib/*": [
+        "libs/seller-lib/src/*"
+      ],
+      "@app/category-lib": [
+        "libs/category-lib/src"
+      ],
+      "@app/category-lib/*": [
+        "libs/category-lib/src/*"
+      ],
+      "@app/service-lib": [
+        "libs/service-lib/src"
+      ],
+      "@app/service-lib/*": [
+        "libs/service-lib/src/*"
+      ],
+      "@app/offer-lib": [
+        "libs/offer-lib/src"
+      ],
+      "@app/offer-lib/*": [
+        "libs/offer-lib/src/*"
+      ],
+      "@app/connect-lib": [
+        "libs/connect-lib/src"
+      ],
+      "@app/connect-lib/*": [
+        "libs/connect-lib/src/*"
+      ],
+      "@app/wallet-lib": [
+        "libs/wallet-lib/src"
+      ],
+      "@app/wallet-lib/*": [
+        "libs/wallet-lib/src/*"
+      ],
+      "@app/booking-lib": [
+        "libs/booking-lib/src"
+      ],
+      "@app/booking-lib/*": [
+        "libs/booking-lib/src/*"
+      ],
+      "@app/review-lib": [
+        "libs/review-lib/src"
+      ],
+      "@app/review-lib/*": [
+        "libs/review-lib/src/*"
+      ],
+      "@app/notification-lib": [
+        "libs/notification-lib/src"
+      ],
+      "@app/notification-lib/*": [
+        "libs/notification-lib/src/*"
+      ],
+      "@app/chat-lib": [
+        "libs/chat-lib/src"
+      ],
+      "@app/chat-lib/*": [
+        "libs/chat-lib/src/*"
+      ],
+      "@app/job-lib": [
+        "libs/job-lib/src"
+      ],
+      "@app/job-lib/*": [
+        "libs/job-lib/src/*"
+      ],
+    }
+  }
+}

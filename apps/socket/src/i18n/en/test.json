@@ -1,0 +1,197 @@
+{
+  "INVALID_REQUEST": "Invalid Request",
+
+  "AUTH": {
+    "PHONE_ALREADY_EXISTS": "User already registered with this phone number",
+    "EMAIL_ALREADY_EXISTS": "User already registered with this email address",
+    "LOGIN": "Logged in successfully",
+    "ACCOUNT_NOT_VERIFIED_OTP_SENT": "Your account is not verified. OTP sent successfully. Please verify your account",
+    "INVALID_CREDENTIALS": "Invalid Credentials",
+    "PHONE_NOT_VERIFIED": "Phone number is not verified",
+    "EMAIL_NOT_VERIFIED": "Email is not verified",
+    "OTP_NOT_VERIFIED": "OTP is not verified",
+    "LOGOUT": "Logged out successfully"
+  },
+
+  "ENQUIRY": {
+    "SENT": "Enquiry sent successfully"
+  },
+
+  "GROUP": {
+    "NOT_FOUND": "Group not found",
+    "INFO": "Group info",
+    "ADDED": "Group added",
+    "UPDATED": "Group updated",
+    "NOT_ADMIN_CANNOT_UPDATE": "You are not group admin, so you don't have permission to perform this action",
+    "NOT_MEMBER_CANNOT_ADD_MEMBER": "You are not a group member, so you don't have permission to add members to this group",
+    "NOT_MEMBER_CANNOT_UPDATE": "You are not a group member, so you don't have permission to update this group",
+    "DELETED": "Group deleted",
+    "LEFT": "Group left",
+    "MEMBER_ALREADY_EXISTS": "Member already exists",
+    "MEMBER_NOT_EXISTS": "Member does not exist",
+    "MEMBER_INVALID": "You can only add your friends to the group",
+    "MEMBERS_UPDATED": "Group members updated",
+    "MEMBER_REMOVED": "Member removed from group"
+  },
+
+  "LANGUAGE": {
+    "UPDATED": "Language updated successfully"
+  },
+
+  "NOTIFICATION": {
+    "NOT_FOUND": "Notification not found",
+    "UPDATED": "Notification updated successfully",
+    "STATUS_UPDATED": "Notification status updated successfully",
+
+    "PUSH_MESSAGES": {
+      "BID_SUBMIT": "Bid Submited",
+      "BID_WITHDRAWN": "Bid Withdrawn",
+      "BID_ACCEPTED": "Bid Accepted",
+      "BID_REJECTED": "Bid Rejected",
+      "OFFER_ACCEPTED": "Offer Accepted",
+      "OFFER_REJECTED": "Offer Rejected",
+      "OFFER_NEW_RECIEVED": "New Offer Received",
+      "OFFER_COUNTERED": "Offer Countred",
+      "SETTLEMENT_AUTO_ACCEPTED": "Settlement Auto Accepted",
+      "ACCEPTE_MESSAGE_REQ": "Accept message request",
+      "REJECTE_MESSAGE_REQ": "Reject message request",
+      "NEW_MESSAGE": "New Message From Buyer",
+      "CREATE_BOOKING": "Create Booking",
+      "RAISE_DISPUTE": "Raised Dispute",
+      "AMIDT_CANCEL": "Amidst Cancel Booking",
+      "DISPUTE_WITHDRAWN": "Dispute WithDrawn",
+      "WITHDRAW_SETTLEMENT": "Withdraw Settlement",
+      "COUNTER_OFFER": "Counter Offer",
+      "MARK_BOOKING": "Mark Complete Booking",
+      "SETTLEMENT_ACCEPTED": "Settlement Accepted",
+      "SETTLEMENT_REJECTED": "Settlement Rejected",
+      "REVIEW_SUBMITED": "Review Submited",
+      "NEW_REVIEW_RECIEVED": "New reviews received",
+      "NEW_CHAT_FROM_SELLER": "New Chat From Seller",
+      "NEW_CHAT_FROM_BUYER": "New Chat From Buyer",
+      "NEW_CHAT": "New Chat",
+      "NEW_SUPPORT_CHAT": "New Support Chat"
+    }
+  },
+
+  "USER": {
+    "NOT_FOUND": "User not found",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account deleted",
+    "EMAIL_NOT_VERIFIED_LOGIN": "Your email is not verified. Please try with phone number.",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid current password",
+    "PROFILE": "Profile data",
+    "INFO": "User info",
+    "LIST": "User list",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "FAQ_UPDATED": "FAQ updated successfully",
+    "FAQ_CREATED": "FAQ created successfully",
+    "FAQ_DELETED": "FAQ deleted successfully",
+    "FAQ_NOT_FOUND": "FAQ not found",
+    "PORTFOLIO_UPDATED": "Portfolio updated successfully",
+    "PORTFOLIO_CREATED": "Portfolio created successfully",
+    "PORTFOLIO_DELETED": "Portfolio deleted successfully",
+    "PORTFOLIO_NOT_FOUND": "Portfolio not found",
+    "LANGUAGE_UPDATED": "Language updated successfully",
+    "ADD_FAVORITE": "Added to favorites successfully",
+    "REMOVE_FAVORITE": "Removed from favorites successfully",
+    "GET_FAVORITE": "Fetched favorites successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite user not found",
+    "GET_NOTIFICATION": "Fetched user notifications"
+  },
+
+  "FAQ": {
+    "DELETED": "FAQ deleted successfully",
+    "NOT_FOUND": "FAQ not found",
+    "UPDATED": "Seller updated successfully",
+    "CREATED": "FAQ created successfully",
+    "GET": "Fetched data"
+  },
+
+  "PORTFOLIO": {
+    "DELETED": "Portfolio deleted successfully",
+    "NOT_FOUND": "Portfolio not found",
+    "UPDATED": "Portfolio updated successfully",
+    "CREATED": "Portfolio created successfully",
+    "GET": "Fetched data"
+  },
+
+  "REVIEW": {
+    "NOT_FOUND": "Not found",
+    "SUGGESTIONS": "Suggestions list",
+    "ADDED": "Tag added successfully",
+    "RESPONSE_TIME": "Response time updated successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Fetched price list successfully",
+    "INFO": "Fetched info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully"
+  },
+
+  "TAG": {
+    "NOT_FOUND": "Tag not found",
+    "ADDED": "Tag added successfully",
+    "UPDATED": "Tag updated successfully",
+    "SUSPENDED": "Tag suspended successfully",
+    "LIST": "Fetched tag list successfully",
+    "INFO": "Fetched tag info successfully",
+    "DELETED": "Tag deleted successfully",
+    "STATUS_UPDATED": "Tag status updated successfully"
+  },
+
+  "CATEGORY": {
+    "NOT_FOUND": "Category not found",
+    "ADDED": "Category added successfully",
+    "UPDATED": "Category updated successfully",
+    "SUSPENDED": "Category suspended successfully",
+    "LIST": "Fetched category list successfully",
+    "INFO": "Fetched category info successfully",
+    "DELETED": "Category deleted successfully",
+    "STATUS_UPDATED": "Category status updated successfully"
+  },
+
+  "BUYER": {
+    "TRANSACTION_HISTORY": "Transaction history updated successfully",
+    "AMOUNT_ADDED": "Amount added successfully",
+    "NOT_FOUND": "Buyer not found",
+    "ADDED": "Buyer added successfully",
+    "UPDATED": "Buyer updated successfully",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account deleted",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid current password",
+    "PROFILE": "Buyer profile data",
+    "INFO": "Buyer info",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite not found"
+  },
+
+  "WALLET": {
+    "NOT_FOUND": "Wallet not found",
+    "ADDED": "Wallet added successfully",
+    "UPDATED": "Wallet updated successfully",
+    "LIST": "Fetched wallet list successfully",
+    "INFO": "Fetched wallet info successfully",
+    "DELETED": "Wallet deleted successfully",
+    "STATUS_UPDATED": "Wallet status updated successfully",
+    "TRANSACTION_HISTORY": "Transaction history",
+    "WALLET_TRANSACTION": "Transaction history",
+    "GET_WALLET": "Fetched wallet amount",
+    "WALLET_INFO": "Fetched wallet transaction info"
+  },
+
+  "CHAT": {
+    "REQUEST_NOT_FOUND": "Request not found",
+    "ALL_CHAT_REQUEST": "Fetched all chat request",
+    "STATUS_UPDATED_ALREADY": "Status already updated",
+    "STATUS_UPDATED": "Status updated successfully",
+    "REQUEST_SENT": "Chat Request sent successfully",
+    "REQUEST_SENT_ONLY": "Chat Request sent to Seller only.",
+    "REQUEST_ALREADY_SENT": "Chat Request already sent"
+  }
+}

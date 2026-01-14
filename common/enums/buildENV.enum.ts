@@ -1,0 +1,4 @@
+export enum BuildENV {
+  DEVELOPMENT = 'DEVELOPMENT',
+  PRODUCTION = 'PRODUCTION',
+}

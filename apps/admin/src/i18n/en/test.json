@@ -1,0 +1,362 @@
+{
+  "INVALID_REQUEST": "Invalid Request",
+  "AUTH": {
+    "PHONE_ALREADY_EXISTS": "User already registered with this phone number",
+    "EMAIL_ALREADY_EXISTS": "User already registered with this email address",
+    "LOGIN": "Logged in successfully",
+    "ACCOUNT_NOT_VERIFIED_OTP_SENT": "Your account is not verified. OTP sent successfully. Please verify your account",
+    "INVALID_CREDENTIALS": "Invalid Credentials",
+    "PHONE_NOT_VERIFIED": "Phone number is not verified",
+    "EMAIL_NOT_VERIFIED": "Email is not verified",
+    "LOGOUT": "Logged out successfully",
+    "FORGOT_PASSWORD_EMAIL_SENT": "Email sent successfully to your registered email address",
+    "RESET_PASSWORD": "Password reset successfully"
+  },
+  "ADMIN": {
+    "NOT_FOUND": "Admin not found",
+    "EMAIL_ALREADY_EXISTS": "Already registered with this email address",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account Deleted",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid current password",
+    "PROFILE": "Profile data",
+    "INFO": "Restaurant info",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully"
+  },
+  "ADMIN_SETTING": {
+    "NOT_FOUND": "Setting not found",
+    "INFO": "Setting info",
+    "UPDATED": "Setting updated",
+    "MINPRICE_LESS": "Minimum price should be less than ",
+    "MAXPRICE_GREATE": "Maximum price should be greater than ",
+    "RESPONSE_TIME": {
+      "NOT_FOUND": "Response Time not found",
+      "UPDATED": "Response Time not found",
+      "INFO": "Response Time info",
+      "ADDED": "Response Time added",
+      "DELETED": "Response Time deleted"
+    },
+
+    "PRICE_RANGE": {
+      "NOT_FOUND": "Price range not found",
+      "INFO": "Price range info",
+      "UPDATED": "Price range updated",
+      "ADDED": "Price range added",
+      "DELETED": "Price range deleted"
+    }
+  },
+  "BOOKING": {
+    "NOT_FOUND": "Booking not found",
+    "INFO": "Booking info",
+    "UPDATED": "Booking updated",
+    "STATUS_UPDATED": "Booking status updated"
+  },
+  "ENQUIRY": {
+    "SENT": "Enquiry sent successfully"
+  },
+  "LANGUAGE": {
+    "UPDATED": "Language updated successfully"
+  },
+  "MENU_ADDON": {
+    "NOT_FOUND": "Menu addon not found",
+    "ADDED": "Menu addon added",
+    "UPDATED": "Menu addon updated",
+    "LIST": "Menu addon list",
+    "INFO": "Menu addon info"
+  },
+  "MENU_CATEGORY": {
+    "NOT_FOUND": "Menu category not found",
+    "ADDED": "Menu category added",
+    "UPDATED": "Menu category updated",
+    "LIST": "Menu categories list",
+    "INFO": "Menu category info"
+  },
+  "NOTIFICATION": {
+    "GET_NOTIFICATION": "Notification data",
+    "NOT_FOUND": "Notification not found",
+    "UPDATED": "Notification updated successfully",
+    "STATUS_UPDATED": "Notification status updated successfully",
+    "DELETED": "Notification deleted successfully",
+    "PUSH_MESSAGES": {
+      "BID_SUBMIT": "Bid Submited",
+      "BID_WITHDRAWN": "Bid Withdrawn",
+      "BID_ACCEPTED": "Bid Accepted",
+      "BID_REJECTED": "Bid Rejected",
+      "OFFER_ACCEPTED": "Offer Accepted",
+      "OFFER_REJECTED": "Offer Rejected",
+      "OFFER_NEW_RECIEVED": "New Offer Received",
+      "OFFER_COUNTERED": "Offer Countred",
+      "SETTLEMENT_AUTO_ACCEPTED": "Settlement Auto Accepted",
+      "ACCEPTE_MESSAGE_REQ": "Accept message request",
+      "REJECTE_MESSAGE_REQ": "Reject message request",
+      "NEW_MESSAGE": "New Message From Buyer",
+      "CREATE_BOOKING": "Create Booking",
+      "RAISE_DISPUTE": "Raised Dispute",
+      "AMIDT_CANCEL": "Amidst Cancel Booking",
+      "DISPUTE_WITHDRAWN": "Dispute WithDrawn",
+      "WITHDRAW_SETTLEMENT": "Withdraw Settlement",
+      "COUNTER_OFFER": "Counter Offer",
+      "MARK_BOOKING": "Mark Complete Booking",
+      "SETTLEMENT_ACCEPTED": "Settlement Accepted",
+      "SETTLEMENT_REJECTED": "Settlement Rejected",
+      "REVIEW_SUBMITED": "Review Submited",
+      "NEW_REVIEW_RECIEVED": "New reviews received",
+      "NEW_CHAT_FROM_SELLER": "New Chat From Seller",
+      "NEW_CHAT_FROM_BUYER": "New Chat From Buyer",
+      "NEW_CHAT": "New Chat",
+      "NEW_SUPPORT_CHAT": "New Support Chat"
+    }
+  },
+  "ORDER": {
+    "NOT_FOUND": "Order not found",
+    "INFO": "Order info",
+    "IN_CART": "Order in cart",
+    "ADDED": "Order added",
+    "UPDATED": "Order updated"
+  },
+  "OTP": {
+    "SENT": "OTP sent successfully",
+    "INVALID": "Invalid OTP",
+    "VERIFIED": "OTP Verified",
+    "EXPIRED": "OTP Invalid or link expired, try again"
+  },
+  "PAGE": {
+    "NOT_FOUND": "Page not found",
+    "LIST": "Pages list",
+    "INFO": "Page info",
+    "UPDATED": "Page updated"
+  },
+  "USER": {
+    "ALREADY_REPORTED": "User already reported",
+    "REPORTED": "User reported successfully",
+    "LIST": "User list success",
+    "EMAIL_ALREADY_EXIST": "Email already exist",
+    "MOBILE_ALREADY_EXIST": "Mobile number already exist",
+    "NOT_FOUND": "User not found",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account Deleted",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid old password",
+    "PROFILE": "Profile data",
+    "INFO": "User info",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite not found",
+    "ALREADY_FAVORITE_USER": "Already favorite",
+    "ADD_FAVORITE": "Add Favorite",
+    "REMOVE_FAVORITE": "Favorite removed",
+    "GET_FAVORITE": "Get favorite list"
+  },
+  "CONNECT": {
+    "GET_DATA": "Connect Data",
+    "ADDED": "Connect added successfully",
+    "UPDATED": "Connect updated successfully",
+    "LIST": "Connect list successfully",
+    "INFO": "Connect info successfully",
+    "DELETED": "Connect deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "NOT_FOUND": "Connect Package not found",
+    "INSUFFICIENT_AMOUNT": "Insufficient balance in wallet amount"
+  },
+  "WALLET": {
+    "NOT_FOUND": "Wallet request not found",
+    "ADDED": "Wallet added successfully",
+    "UPDATED": "Wallet updated successfully",
+    "LIST": "Wallet list successfully",
+    "INFO": "Wallet info successfully",
+    "DELETED": "Wallet deleted successfully",
+    "STATUS_UPDATED": "Wallet status updated successfully",
+    "TRANSACTION_HISTORY": "Transaction history",
+    "WALLET_TRANSACTION": "Transaction history",
+    "SUCCESS": "Payment page initiated",
+    "FAILED": "Payment page session failed",
+    "WEBHOOK_RESP": "Webhook response success",
+    "INSUFFICIENT_AMOUNT": "Insufficient amount",
+    "REQUESTED": "Requested successfully"
+  },
+  "BUYER": {
+    "TRANSACTION_HISTORY": "Transaction history updated successfully",
+    "AMOUNT_ADDED": "Amount added successfully",
+    "NOT_FOUND": "Buyer not found",
+    "ADDED": "Buyer added successfully",
+    "UPDATED": "Buyer updated successfully",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account Deleted",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid old password",
+    "PROFILE": "Buyer Profile data",
+    "INFO": "Buyer info",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite not found",
+    "WITHDRAW": {
+      "NOT_FOUND": "Withdraw not found",
+      "ADDED": "Withdraw added successfully",
+      "UPDATED": "Status updated successfully"
+    }
+  },
+
+  "BANNER": {
+    "NOT_FOUND": "Banner not found",
+    "ADDED": "Banner added successfully",
+    "UPDATED": "Banner updated successfully",
+    "SUSPENDED": "Banner suspended successfully",
+    "LIST": "Fetched Banner list successfully",
+    "INFO": "Fetched Banner info successfully",
+    "DELETED": "Banner deleted successfully",
+    "STATUS_UPDATED": "Banner status updated successfully",
+    "TESTIMONIAL": {
+      "NOT_FOUND": "Testimonial not found",
+      "ADDED": "Testimonial added successfully",
+      "UPDATED": "Testimonial updated successfully",
+      "DELETED": "Testimonial deleted successfully"
+    }
+  },
+
+  "CATEGORY": {
+    "NOT_FOUND": "Category not found",
+    "ADDED": "Category added successfully",
+    "UPDATED": "Category updated successfully",
+    "SUSPENDED": "Category suspended successfully",
+    "LIST": "Category list successfully",
+    "INFO": "Category info successfully",
+    "DELETED": "Category deleted successfully",
+    "STATUS_UPDATED": "Category status updated successfully"
+  },
+  "TAG": {
+    "NOT_FOUND": "Tag not found",
+    "ADDED": "Tag added successfully",
+    "UPDATED": "Tag updated successfully",
+    "SUSPENDED": "Tag suspended successfully",
+    "LIST": "Tag list successfully",
+    "INFO": "Tag info successfully",
+    "DELETED": "Tag deleted successfully",
+    "STATUS_UPDATED": "Tag status updated successfully"
+  },
+  "RESOURCES": {
+    "NOT_FOUND": "Not found",
+    "SUGGESTIONS": "Suggestions list",
+    "ADDED": "Tag added successfully",
+    "RESPONSE_TIME": "Response time updated successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Price list successfully",
+    "INFO": "Info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully"
+  },
+  "REVIEW": {
+    "NOT_FOUND": "Not found",
+    "SUGGESTIONS": "Suggestions list",
+    "ADDED": "Tag added successfully",
+    "RESPONSE_TIME": "Response time updated successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Price list successfully",
+    "INFO": "Info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully"
+  },
+  "SELLER": {
+    "EMAIL_ALREADY_EXIST": "Email already exist",
+    "MOBILE_ALREADY_EXIST": "Mobile number already exist",
+    "TRANSACTION_HISTORY": "Transaction history updated successfully",
+    "AMOUNT_ADDED": "Amount added successfully",
+    "NOT_FOUND": "Seller not found",
+    "ADDED": "Seller added successfully",
+    "UPDATED": "Seller updated successfully",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account Deleted",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid old password",
+    "PROFILE": "Seller Profile data",
+    "INFO": "Seller info",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite not found",
+    "REQUEST_ACCEPTED": "Request accepted",
+    "REQUEST_REJECTED": "Request rejected",
+    "PHONE_ALREADY_EXISTS": "User already registered with this phone number",
+    "EMAIL_ALREADY_EXISTS": "User already registered with this email address",
+    "FAQ": {
+      "DELETED": "FAQ deleted successfully",
+      "NOT_FOUND": "FAQ not found",
+      "UPDATED": "FAQ updated successfully",
+      "CREATED": "FAQ created successfully",
+      "GET": "Get data"
+    },
+    "PORTFOLIO": {
+      "DELETED": "Portfolio deleted successfully",
+      "NOT_FOUND": "Portfolio not found",
+      "UPDATED": "Portfolio updated successfully",
+      "CREATED": "Portfolio created successfully",
+      "GET": "Get data"
+    },
+    "REVIEW": {
+      "NOT_FOUND": "Review not found",
+      "ADDED": "Review added successfully",
+      "UPDATED": "Review updated successfully",
+      "DELETED": "Review deleted successfully"
+    },
+    "MAIL": {
+      "REJECT_TITLE": "Profile rejected by admin",
+      "REJECT_DESC": "As requested, we reviewed your account registration. Some information is incomplete or incorrect. Please update your profile with accurate data. complete your account details",
+      "APPROVE_TITLE": "Profile approved by admin",
+      "APPROVE_DESC": "We are excited to inform you that your profile on Match Creator App has been successfully approved by our team. You can now enjoy all the features and benefits of our platform, and we encourage you to explore and engage with other members of the Match Creator community."
+    }
+  },
+  "SERVICE": {
+    "ALL_SERVICES": "Get all service list",
+    "NOT_FOUND": "Not found",
+    "ADDED": "Service added successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Service list successfully",
+    "INFO": "Info successfully",
+    "DELETED": "Service deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "SERVICE_NOT_DELETE": "Service successfully closed",
+    "SERVICE_CANT_EDIT": "Cannot edit: This service has received a bid.",
+    "INSUFFICIENT_AMOUNT": "Insufficient balance in wallet amount",
+    "MILESTONE": {
+      "NOT_FOUND": "Not found",
+      "ADDED": "Milestone added successfully",
+      "UPDATED": "Milestone Updated successfully",
+      "DELETED": "Milestone deleted successfully"
+    },
+    "COMPLETE_BOOKING_CAN_REVIEW": "Only completed booking can be reviewed",
+    "CUSTOMER_CAN_REVIEW": "Only customer can review on booking.",
+    "ALRADY_REWVIEWD": "Already reviewed on this booking.",
+    "REVIEW_ADDED": "Review added successfully",
+    "BID": {
+      "NOT_FOUND": "Bid found",
+      "RAISED": "Bid raised successfully",
+      "ADDED": "Bid added successfully",
+      "UPDATED": "Bid Updated successfully",
+      "WITHDRAWN": "Bid withdrawn successfully",
+      "DELETED": "Bid deleted successfully",
+      "BID_CANT_PLACE": "Bid can't be placed, This bid has been booked by someone.",
+      "BID_SEVICE_CLOSED": "Bid can't be placed, This bid has been closed.",
+      "BID_CANT_WITHDRAWN": "This bid has been withdrawn; edit bid can't be placed",
+      "BID_CANT_RAISED": "Bid can't be raised twice.",
+      "INSUFFICIENT_CONNECT": "Insufficient connect to raise bid. Please add connect before raising bid.",
+      "LIMIT_EXCEED": "Bid update limit exceeded.",
+      "EDIT_REMAINS": " edit attempts remain.",
+      "NO_TXN_AVAILABLE": "No txn avialable for this bid",
+      "ALREAYD_ACCEPTED": "You have already accepted a bid."
+    },
+    "JOB": {
+      "ACCEPTED": "Bid accepted successfully.",
+      "NOT_FOUND": "Job found",
+      "RAISED": "Job raised successfully",
+      "ADDED": "Job added successfully",
+      "UPDATED": "Job Updated successfully",
+      "WITHDRAWN": "Job withdrawn successfully",
+      "DELETED": "Job deleted successfully"
+    }
+  }
+}

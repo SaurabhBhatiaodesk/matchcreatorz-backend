@@ -1,0 +1,479 @@
+{
+  "INVALID_REQUEST": "Invalid Request",
+
+  "AUTH": {
+    "PHONE_ALREADY_EXISTS": "User already registered with this phone number",
+    "EMAIL_ALREADY_EXISTS": "User already registered with this email address",
+    "LOGIN": "Logged in successfully",
+    "ACCOUNT_NOT_VERIFIED_OTP_SENT": "Your account is not verified. OTP sent successfully. Please verify your account",
+    "INVALID_CREDENTIALS": "Invalid Credentials",
+    "PHONE_NOT_VERIFIED": "Phone number is not verified",
+    "EMAIL_NOT_VERIFIED": "Email is not verified",
+    "OTP_NOT_VERIFIED": "OTP is not verified",
+    "LOGOUT": "Logged out successfully"
+  },
+
+  "ENQUIRY": {
+    "SENT": "Enquiry sent successfully"
+  },
+
+  "GROUP": {
+    "NOT_FOUND": "Group not found",
+    "INFO": "Group info",
+    "ADDED": "Group added",
+    "UPDATED": "Group updated",
+    "NOT_ADMIN_CANNOT_UPDATE": "You are not group admin, so you don't have permission to perform this action",
+    "NOT_MEMBER_CANNOT_ADD_MEMBER": "You are not a group member, so you don't have permission to add members to this group",
+    "NOT_MEMBER_CANNOT_UPDATE": "You are not a group member, so you don't have permission to update this group",
+    "DELETED": "Group deleted",
+    "LEFT": "Group left",
+    "MEMBER_ALREADY_EXISTS": "Member already exists",
+    "MEMBER_NOT_EXISTS": "Member does not exist",
+    "MEMBER_INVALID": "You can only add your friends to the group",
+    "MEMBERS_UPDATED": "Group members updated",
+    "MEMBER_REMOVED": "Member removed from group"
+  },
+
+  "ADMIN_SETTING": {
+    "NOT_FOUND": "Setting not found",
+    "INFO": "Setting info",
+    "UPDATED": "Setting updated",
+    "RESPONSE_TIME": {
+      "NOT_FOUND": "Response Time not found",
+      "UPDATED": "Response Time not found",
+      "INFO": "Response Time info",
+      "ADDED": "Response Time added",
+      "DELETED": "Response Time deleted"
+    },
+
+    "PRICE_RANGE": {
+      "NOT_FOUND": "Price range not found",
+      "INFO": "Price range info",
+      "UPDATED": "Price range updated",
+      "ADDED": "Price range added",
+      "DELETED": "Price range deleted"
+    },
+
+    "MINPRICE_LESS": "Minimum price should be less than ",
+    "MAXPRICE_GREATE": "Maximum price should be greater than "
+  },
+
+  "LANGUAGE": {
+    "UPDATED": "Language updated successfully"
+  },
+
+  "NOTIFICATION": {
+    "NOT_FOUND": "Notification not found",
+    "UPDATED": "Notification updated successfully",
+    "STATUS_UPDATED": "Notification status updated successfully",
+
+    "SUBMIT_BID": "Seller submits a new bid",
+    "RESUBMIT_BID": "Seller resubmits a new bid",
+    "WITHDRAW_BID": "Seller withdraws a bid",
+    "WITHDRAW_DISPUTE": "Seller successfully withdrew the dispute",
+    "WITHDRAW_SELLERMENT": "Settlement withdrawal successful.",
+
+    "SELLER_ACCEPT_OFFER": "Seller accepts an offer",
+    "SELLER_REJECT_OFFER": "Seller rejects an offer",
+
+    "SELLER_SEND_COUNTER_OFFER": "The seller sends a counteroffer",
+    "SELLER_ACCEPT_COUNTER_OFFER": "Seller accepts the counteroffer",
+    "SELLER_REJECT_COUNTER_OFFER": "Seller rejects the counteroffer",
+    "RECIEVE_NEW_MESSAGE": "Receive a new message",
+    "MARK_JOB_COMPLETE": "The seller marks a job complete and sends proof of work",
+    "RAISED_DISPUTE": "Seller raises dispute",
+    "CANCEL_BOOKING": "Seller cancels a booking",
+    "SEND_COUNTER_SETTLEMENT": "The seller sends a settlement or counter-settlement amount",
+    "COUNTER_SETTLEMENT_AMOUNT": "The seller sends a counter-settlement amount",
+    "SEND_SETTLEMENT": "The seller sends a settlement",
+    "ACCEPT_SETTLEMENT": "Seller accepts a settlement or counter-settlement amount sent",
+    "REJECT_SETTLEMENT": "Seller rejects a settlement or counter-settlement amount sent",
+    "MESSAGE_REQUEST_ACCEPT": "The seller accepts a message request",
+    "MESSAGE_REQUEST_REJECT": "The seller reject a message request",
+    "REPLY_FROM_ADMIN": "New reply from the admin on the support chat",
+
+    "PURCHASE_SERVICE": "Seller submits a new bid",
+    "ACCEPT_BID": "Buyer accepts a bid",
+    "REJECT_BID": "Buyer rejects a bid",
+    "SEND_COUNTEROFFER": "Buyer sends a counteroffer",
+    "ACCEPT_COUNTEROFFER": "Buyer accepts a counteroffer",
+    "REJECT_COUNTEROFFER": "Buyer rejects a counteroffer",
+    "NEW_MESSAGE": "New request received in an open chat",
+    "NEW_MESSAGE_REQUEST": "A new message request was received from a buyer",
+
+    "NEW_OFFER_RECIEVED": "New Offer received",
+    "BUYER_CANCEL_BOOKING": "Buyer cancels a booking",
+    "BUYER_SEND_SETTLEMENT": "Buyer sends a Settlement amount",
+    "BUYER_SEND_COUNTEROFFER": "Buyer sends a counter-settlement amount",
+    "BUYER_ACCEPT_SETTLEMENT": "Buyer accepts a settlement or counter-settlement amount sent by the buyer",
+    "BUYER_REJECT_SETTLEMENT": "Buyer rejects a settlement or counter-settlement amount sent by the buyer",
+    "BUYER_MARK_BOOKING_COMPLETE": "Buyer marks a booking as complete",
+    "BUYER_ACCPET_PROOF_OFCOMPLETION": "Buyer accepts proof of completion",
+    "BUYER_REJECT_PROOF_OFCOMPLETION": "Buyer rejects proof of completion",
+    "BUYER_RAISE_DISPUTE": "Buyer raises dispute",
+    "BUYER_SUBMIT_REVIEW_RATING": "Buyer submits a new review rating",
+
+    "PUSH_MESSAGES": {
+      "BID_SUBMIT": "Bid Submited",
+      "BID_WITHDRAWN": "Bid Withdrawn",
+      "BID_ACCEPTED": "Bid Accepted",
+      "BID_REJECTED": "Bid Rejected",
+      "OFFER_ACCEPTED": "Offer Accepted",
+      "OFFER_REJECTED": "Offer Rejected",
+      "OFFER_NEW_RECIEVED": "New Offer Received",
+      "OFFER_COUNTERED": "Offer Countred",
+      "SETTLEMENT_AUTO_ACCEPTED": "Settlement Auto Accepted",
+      "ACCEPTE_MESSAGE_REQ": "Accept message request",
+      "REJECTE_MESSAGE_REQ": "Reject message request",
+      "NEW_MESSAGE": "New Message From Buyer",
+      "CREATE_BOOKING": "Create Booking",
+      "RAISE_DISPUTE": "Raised Dispute",
+      "AMIDT_CANCEL": "Amidst Cancel Booking",
+      "DISPUTE_WITHDRAWN": "Dispute WithDrawn",
+      "WITHDRAW_SETTLEMENT": "Withdraw Settlement",
+      "COUNTER_OFFER": "Counter Offer",
+      "MARK_BOOKING": "Mark Complete Booking",
+      "SETTLEMENT_ACCEPTED": "Settlement Accepted",
+      "SETTLEMENT_REJECTED": "Settlement Rejected",
+      "REVIEW_SUBMITED": "Review Submited",
+      "NEW_REVIEW_RECIEVED": "New reviews received",
+      "NEW_CHAT_FROM_SELLER": "New Chat From Seller",
+      "NEW_CHAT_FROM_BUYER": "New Chat From Buyer",
+      "NEW_CHAT": "New Chat",
+      "NEW_SUPPORT_CHAT": "New Support Chat"
+    }
+  },
+
+  "OTP": {
+    "SENT": "OTP sent successfully",
+    "INVALID": "Invalid OTP",
+    "VERIFIED": "OTP Verified"
+  },
+
+  "PAGE": {
+    "NOT_FOUND": "Page not found",
+    "LIST": "Pages list",
+    "INFO": "Page info",
+    "UPDATED": "Page updated"
+  },
+
+  "USER": {
+    "NOT_FOUND": "User not found",
+    "ALREADY_REGISTER_BUYER" :"User already registered as buyer",
+    "ALREADY_REGISTER_SELLER" :"User already registered as seller",
+    "ALREADY_REPORTED": "Already reported to this user",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account deleted",
+    "EMAIL_NOT_VERIFIED_LOGIN": "Your email is not verified. Please try with phone number.",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid old password",
+    "PROFILE": "Profile data",
+    "INFO": "User info",
+    "LIST": "User list",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "FAQ_UPDATED": "FAQ updated successfully",
+    "FAQ_CREATED": "FAQ created successfully",
+    "FAQ_DELETED": "FAQ deleted successfully",
+    "FAQ_NOT_FOUND": "FAQ not found",
+    "PORTFOLIO_UPDATED": "Portfolio updated successfully",
+    "PORTFOLIO_CREATED": "Portfolio created successfully",
+    "PORTFOLIO_DELETED": "Portfolio deleted successfully",
+    "PORTFOLIO_NOT_FOUND": "Portfolio not found",
+    "LANGUAGE_UPDATED": "Language updated successfully",
+    "ADD_FAVORITE": "Added to favorites successfully",
+    "REMOVE_FAVORITE": "Removed from favorites successfully",
+    "GET_FAVORITE": "Fetched favorites successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite user not found",
+    "ALREADY_FAVORITE_USER": "Already favorite",
+    "GET_NOTIFICATION": "Fetched user notifications",
+    "REPORTED": "Reported successfully"
+  },
+
+  "SERVICE": {
+    "SERVICE_NOT_FOUND": "Service not found",
+    "SERVICE_ADDED": "Service added successfully",
+    "SERVICE_UPDATED": "Service updated successfully",
+    "SERVICE_DELETED": "Service deleted successfully",
+    "SERVICE_DETAIL": "Service details",
+    "ALL_SERVICES": "Fetched all services",
+    "MY_SERVICES": "Fetched my services",
+    "NOT_FOUND": "Not found",
+    "ADDED": "Service added successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Fetched service list successfully",
+    "INFO": "Fetched info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "SERVICE_NOT_DELETE": "Received Bid Job can not be delete. You can mark it closed.",
+    "INSUFFICIENT_AMOUNT": "Insufficient balance in wallet amount",
+    "MILESTONE": {
+      "NOT_FOUND": "Not found",
+      "ADDED": "Milestone added successfully",
+      "UPDATED": "Milestone Updated successfully",
+      "DELETED": "Milestone deleted successfully"
+    },
+    "COMPLETE_BOOKING_CAN_REVIEW": "Only completed booking can be reviewed",
+    "CUSTOMER_CAN_REVIEW": "Only customer can review on booking.",
+    "ALRADY_REWVIEWD": "Already reviewed on this booking.",
+    "REVIEW_ADDED": "Review added successfully",
+    "BID": {
+      "ACCEPTED": "Bid accepted successfully.",
+      "REJECTED": "Bid rejected successfully.",
+      "NOT_FOUND": "Bid found",
+      "RAISED": "Bid raised successfully",
+      "ADDED": "Bid added successfully",
+      "UPDATED": "Bid Updated successfully",
+      "WITHDRAWN": "Bid withdrawn successfully",
+      "DELETED": "Bid deleted successfully",
+      "BID_CANT_PLACE": "Bid can't be placed, This bid has been booked by someone.",
+      "BID_SEVICE_CLOSED": "Bid can't be placed, This bid has been closed.",
+      "BID_CANT_WITHDRAWN": "This bid has been withdrawn; edit bid can't be placed",
+      "BID_CANT_RAISED": "Bid can't be raised twice.",
+      "INSUFFICIENT_CONNECT": "Insufficient connect to raise bid. Please add connect before raising bid.",
+      "LIMIT_EXCEED": "Bid update limit exceeded.",
+      "EDIT_REMAINS": " edit attempts remain.",
+      "NO_TXN_AVAILABLE": "No txn avialable for this bid",
+      "ALREAYD_ACCEPTED": "You have already accepted a bid."
+    },
+    "JOB": {
+      "ACCEPTED": "Bid accepted successfully.",
+      "NOT_FOUND": "Job found",
+      "RAISED": "Job raised successfully",
+      "ADDED": "Job added successfully",
+      "UPDATED": "Job Updated successfully",
+      "WITHDRAWN": "Job withdrawn successfully",
+      "DELETED": "Job deleted successfully"
+    }
+  },
+
+  "OFFER": {
+    "OFFER_NOT_FOUND": "Offer not found",
+    "OFFER_ADDED": "Offer added successfully",
+    "OFFER_UPDATED": "Offer updated successfully",
+    "OFFER_DELETED": "Offer deleted successfully",
+    "OFFER_DETAIL": "Offer details",
+    "COUNTER_OFFER_SEND": "Counter offer sent successfully",
+    "NOT_FOUND": "Not found",
+    "ADDED": "Offer added successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Fetched offer list successfully",
+    "INFO": "Fetched info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED_ALREADY": "Offer Status already changed",
+    "STATUS_UPDATED": "Status updated successfully",
+    "WITHDRAW_UPDATED": "Request withdrawn successfully"
+  },
+
+  "RESOURCES": {
+    "NOT_FOUND": "Not found",
+    "SUGGESTIONS": "Suggestions list",
+    "PRICE_LIST": "Price list",
+    "RESPONSE_TIME": "Response time list",
+    "ADDED": "Tag added successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Fetched price list successfully",
+    "INFO": "Fetched info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully"
+  },
+
+  "BOOKING": {
+    "CREATED": "Booking created successfully",
+    "BOOKING_NOT_FOUND": "Booking not found",
+    "BOOKING_ADDED": "Booking added successfully",
+    "BOOKING_UPDATED": "Booking updated successfully",
+    "BOOKING_DETAIL": "Booking details",
+    "COUNTER_OFFER_SEND": "Counter Proposal sent successfully",
+    "INSUFFICIENT_BALANCE": "Insufficient balance in wallet amount",
+    "NOT_FOUND": "Not found",
+    "ADDED": "Offer added successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Fetched booking list successfully",
+    "INFO": "Fetched booking info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED_ALREADY": "Booking Status already changed",
+    "STATUS_UPDATED": "Booking Status updated successfully",
+    "ALREADY_CANCELLED": "Booking already cancelled",
+    "ALREADY_COMPLTED": "Booking already completed",
+    "NOT_SEND_CENCELLETION_REQUEST": "You can not proposed counter for this booking.",
+    "NOT_SEND_COMPLETION_REQUEST": "You can not complete this booking.It already cancelled",
+    "COMPLETION_PROCESS_UPDATE": "You have successfully sent completion booking request.",
+    "Not_A_VALID_TYPE": "Not a valid request type.",
+    "BOOKING_ALREADY_COMPLETED": "Booking already completed.",
+    "BOOKING_IS_ONGOING_STATE": "Booking is ongoing",
+    "BOOKING_DISPUTED": "Booking disputed.",
+    "BOOKING_CANCELED": "Booking cancelled",
+    "REVIEW_ADDED":"Review added successfully",
+    "MINIMUMSETTLEAMOUNT": "Booking Settlement Amount Proposed can not be less than minimum settlement percenatage."
+  },
+
+  "CONNECT": {
+    "GET_DATA": "Connect data",
+    "NOT_FOUND": "Connect Package not found",
+    "ADDED": "Connect added successfully",
+    "UPDATED": "Connect updated successfully",
+    "LIST": "Fetched connect list successfully",
+    "INFO": "Fetched connect info successfully",
+    "DELETED": "Connect deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "INSUFFICIENT_AMOUNT": "Insufficient balance in wallet amount"
+  },
+
+  "SELLER": {
+    "TRANSACTION_HISTORY": "Transaction history updated successfully",
+    "AMOUNT_ADDED": "Amount added successfully",
+    "NOT_FOUND": "Seller not found",
+    "ADDED": "Seller added successfully",
+    "UPDATED": "Seller updated successfully",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account deleted",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid old password",
+    "PROFILE": "Seller profile data",
+    "INFO": "Seller info",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite not found",
+    "REQUEST_ACCEPTED": "Request accepted",
+    "REQUEST_REJECTED": "Request rejected",
+    "PHONE_ALREADY_EXISTS": "User already registered with this phone number",
+    "EMAIL_ALREADY_EXISTS": "User already registered with this email address",
+    "REVIEW": {
+      "NOT_FOUND": "Review not found",
+      "ADDED": "Review added successfully",
+      "UPDATED": "Review updated successfully",
+      "DELETED": "Review deleted successfully"
+    }
+  },
+
+  "FAQ": {
+    "DELETED": "FAQ deleted successfully",
+    "NOT_FOUND": "FAQ not found",
+    "UPDATED": "Seller updated successfully",
+    "CREATED": "FAQ created successfully",
+    "GET": "Fetched data"
+  },
+
+  "PORTFOLIO": {
+    "DELETED": "Portfolio deleted successfully",
+    "NOT_FOUND": "Portfolio not found",
+    "UPDATED": "Portfolio updated successfully",
+    "CREATED": "Portfolio created successfully",
+    "GET": "Fetched data"
+  },
+
+  "REVIEW": {
+    "NOT_FOUND": "Not found",
+    "SUGGESTIONS": "Suggestions list",
+    "ADDED": "Tag added successfully",
+    "RESPONSE_TIME": "Response time updated successfully",
+    "UPDATED": "Updated successfully",
+    "SUSPENDED": "Suspended successfully",
+    "LIST": "Fetched price list successfully",
+    "INFO": "Fetched info successfully",
+    "DELETED": "Deleted successfully",
+    "STATUS_UPDATED": "Status updated successfully"
+  },
+
+  "TAG": {
+    "NOT_FOUND": "Tag not found",
+    "ADDED": "Tag added successfully",
+    "UPDATED": "Tag updated successfully",
+    "SUSPENDED": "Tag suspended successfully",
+    "LIST": "Fetched tag list successfully",
+    "INFO": "Fetched tag info successfully",
+    "DELETED": "Tag deleted successfully",
+    "STATUS_UPDATED": "Tag status updated successfully"
+  },
+
+  "CATEGORY": {
+    "NOT_FOUND": "Category not found",
+    "ADDED": "Category added successfully",
+    "UPDATED": "Category updated successfully",
+    "SUSPENDED": "Category suspended successfully",
+    "LIST": "Fetched category list successfully",
+    "INFO": "Fetched category info successfully",
+    "DELETED": "Category deleted successfully",
+    "STATUS_UPDATED": "Category status updated successfully"
+  },
+
+  "BANNER": {
+    "NOT_FOUND": "Banner not found",
+    "ADDED": "Banner added successfully",
+    "UPDATED": "Banner updated successfully",
+    "SUSPENDED": "Banner suspended successfully",
+    "LIST": "Fetched Banner list successfully",
+    "INFO": "Fetched Banner info successfully",
+    "DELETED": "Banner deleted successfully",
+    "STATUS_UPDATED": "Banner status updated successfully",
+    "TESTIMONIAL": {
+      "NOT_FOUND": "Testimonial not found",
+      "ADDED": "Testimonial added successfully",
+      "UPDATED": "Testimonial updated successfully",
+      "DELETED": "Testimonial deleted successfully"
+    }
+  },
+
+  "BUYER": {
+    "TRANSACTION_HISTORY": "Transaction history updated successfully",
+    "AMOUNT_ADDED": "Amount added successfully",
+    "NOT_FOUND": "Buyer not found",
+    "ADDED": "Buyer added successfully",
+    "UPDATED": "Buyer updated successfully",
+    "ACCOUNT_SUSPENDED": "Your account has been suspended",
+    "ACCOUNT_DELETED": "Account deleted",
+    "PASSWORD_CHANGED": "Password changed successfully",
+    "INVALID_CURRENT_PASSWORD": "Invalid old password",
+    "PROFILE": "Buyer profile data",
+    "INFO": "Buyer info",
+    "PROFILE_UPDATED": "Profile updated successfully",
+    "AVATAR_UPDATED": "Avatar updated successfully",
+    "STATUS_UPDATED": "Status updated successfully",
+    "FAVORITE_USER_NOT_FOUND": "Favorite not found",
+    "WITHDRAW": {
+      "NOT_FOUND": "Withdraw not found",
+      "ADDED": "Withdraw added successfully",
+      "UPDATED": "Status updated successfully"
+    }
+  },
+
+  "WALLET": {
+    "NOT_FOUND": "Wallet request not found",
+    "ADDED": "Wallet added successfully",
+    "UPDATED": "Wallet updated successfully",
+    "LIST": "Fetched wallet list successfully",
+    "INFO": "Fetched withdraw info successfully",
+    "DELETED": "Wallet deleted successfully",
+    "STATUS_UPDATED": "Wallet status updated successfully",
+    "TRANSACTION_HISTORY": "Transaction history",
+    "WALLET_TRANSACTION": "Transaction history",
+    "GET_WALLET": "Fetched wallet amount",
+    "WALLET_INFO": "Fetched wallet transaction info",
+    "SUCCESS": "Wallet payment success",
+    "FAILED": "Wallet payment failed",
+    "WEBHOOK_RESP": "Webhook response success",
+    "INSUFFICIENT_AMOUNT": "Insufficient amount to withdraw request",
+    "REQUESTED": "Withdraw Request sent successfully to admin. Amount will be transfer in 1/2 days in your bank account."
+  },
+
+  "CHAT": {
+    "REQUEST_NOT_FOUND": "Request not found",
+    "ALL_CHAT_REQUEST": "Fetched all chat request",
+    "STATUS_UPDATED_ALREADY": "Status already updated",
+    "STATUS_UPDATED": "Status updated successfully",
+    "WITHDRAW_UPDATED": "Request withdrawn successfully",
+    "CHAT_DELETED": "Chat deleted successfully",
+    "REQUEST_SENT": "Chat Request sent successfully",
+    "REQUEST_SENT_ONLY": "Chat Request sent to Seller only.",
+    "REQUEST_ALREADY_SENT": "Chat Request already sent",
+    "WEBHOOK_RESP": "Webhook response success",
+    "SUCCESS": "Payment success",
+    "FAILED": "Payment failed"
+  }
+}
