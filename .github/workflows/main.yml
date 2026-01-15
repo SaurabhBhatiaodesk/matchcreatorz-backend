@@ -1,114 +1,125 @@
-name: Deploy Matchcreators Backend
+name: Deploy Backend Application
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches: [ "main" ]
+  workflow_dispatch: 
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Deployment Info
+      - name: Deployment Started
         run: |
-          echo "🚀 Deployment started"
+          echo "🚀 Backend deployment started at $(date)"
           echo "Repository: ${{ github.repository }}"
           echo "Branch: ${{ github.ref_name }}"
           echo "Commit: ${{ github.sha }}"
-          echo "Time: $(date)"
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: '20.15.1'
+          cache: 'npm'
 
       - name: Install dependencies
         run: |
-          echo "📦 Installing dependencies"
-          npm ci
-          echo "✅ Dependencies installed"
+          echo "📦 Installing backend dependencies..."
+          npm ci --ignore-scripts
+          echo "✅ Backend dependencies installed successfully"
+        env:
+          NPM_CONFIG_IGNORE_SCRIPTS: true
 
-      - name: Build NestJS applications
+      - name: Create FCM key file
+        run: |
+          echo "🔐 Creating FCM key file from secret"
+          mkdir -p common/utils
+          echo '${{ secrets.FCM_KEY_JSON }}' > common/utils/fcmkey.json
+          echo "✅ fcmkey.json created"
+        env:
+          FCM_KEY_JSON: ${{ secrets.FCM_KEY_JSON }}
+
+      - name: Build application (NestJS Monorepo)
         run: |
           echo "🔨 Building NestJS monorepo (user, admin, socket)"
           npm run build
-          echo "✅ Build completed"
+        env:
+          NODE_ENV: production
 
-      - name: Cleanup before deploy
+      - name: Prepare deployment files
         run: |
-          echo "🧹 Cleaning workspace"
-          rm -rf node_modules
-          rm -rf .git
-          echo "✅ Cleanup done"
+          echo "🧹 Cleaning up files for deployment..."
+          rm -rf .git node_modules/.cache
+          echo "✅ Backend deployment files ready"
 
-      - name: Prepare server directory & permissions
+      - name: Fix remote permissions
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: ubuntu
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY_LIVE }}
           script: |
-            echo "🔐 Preparing deployment directory"
-            mkdir -p /home/ubuntu/MatchcreatorsBackend
-            sudo chown -R ubuntu:ubuntu /home/ubuntu/MatchcreatorsBackend
-            chmod -R 755 /home/ubuntu/MatchcreatorsBackend
-            echo "✅ Directory ready"
+            echo "🔐 Fixing remote permissions..."
+            sudo chown -R ${{ secrets.SERVER_USER }}:${{ secrets.SERVER_USER }} /home/ubuntu/MatchcreatorsBackend/
+            sudo chmod -R 755 /home/ubuntu/MatchcreatorsBackend/
+            echo "✅ Permissions fixed successfully"
 
-      - name: Deploy files via rsync
+      - name: Deploy via Rsync 
         uses: easingthemes/ssh-deploy@main
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY_LIVE }}
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
-          REMOTE_USER: ubuntu
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
           TARGET: /home/ubuntu/MatchcreatorsBackend/
-          ARGS: >
-            -rlgoDzvc
-            --delete
-            --exclude=node_modules
-            --exclude=.git
-            --exclude=.github
-            --exclude=README.md
+          ARGS: "-rlgoDzvc --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r --no-perms --no-owner --no-group --exclude=node_modules --exclude=.git --exclude=.next --exclude=dist"
+          BEFORE_RSYNC: echo "🚀 Starting file deployment to server..."
+          AFTER_RSYNC: echo "✅ Files deployed successfully to server!"
 
-      - name: Install production dependencies on server
+      - name: Install server dependencies
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: ubuntu
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY_LIVE }}
           script: |
-            echo "📦 Installing production dependencies on server"
-            cd /home/ubuntu/MatchcreatorsBackend
-            npm ci --production
-            echo "✅ Server dependencies installed"
+            echo "📦 Installing server dependencies..."
+            cd /home/ubuntu/MatchcreatorsBackend/
+            npm ci --production --ignore-scripts
+            echo "✅ Server dependencies installed successfully"
 
-      - name: Restart PM2 services
+      - name: Restart backend application
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: ubuntu
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY_LIVE }}
           script: |
-            echo "🔄 Restarting PM2 services"
-            cd /home/ubuntu/MatchcreatorsBackend
-
-            pm2 start ecosystem.config.js --env production || pm2 reload ecosystem.config.js
+            echo "🔄 Restarting backend application..."
+            cd /home/ubuntu/MatchcreatorsBackend/
+            pm2 reload matchcreatorsapp-dev-api || pm2 start "npm run start" --name matchcreatorsapp-dev-api
+            pm2 reload matchcreatorsapp-dev-admin || pm2 start "npm run start" --name matchcreatorsapp-dev-admin
+            pm2 reload matchcreatorsapp-dev-socket || pm2 start "npm run start" --name matchcreatorsapp-dev-socket
             pm2 save
-            pm2 status
+            echo "✅ Backend application restarted successfully"
 
       - name: Health check
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: ubuntu
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY_LIVE }}
           script: |
-            echo "🏥 Health check"
+            echo "🏥 Performing health check..."
             sleep 5
-            pm2 list
-            echo "🎉 Deployment completed successfully"
+            pm2 status
+            echo "🎉 Backend deployment completed successfully!"
+            echo "📊 Deployment Summary:"
+            echo "  - Repository: ${{ github.repository }}"
+            echo "  - Branch: ${{ github.ref_name }}"
+            echo "  - Commit: ${{ github.sha }}"
+            echo "  - Deployed at: $(date)"
