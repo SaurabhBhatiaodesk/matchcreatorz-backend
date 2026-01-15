@@ -8,18 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-
-    env:
-      NODE_ENV: production
-      FCM_KEY_JSON: ${{ secrets.FCM_KEY_JSON }}
+    timeout-minutes: 30
 
     steps:
-      # 1️⃣ Checkout repo
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2️⃣ Deployment start log
       - name: Deployment Started
         run: |
           echo "🚀 Backend deployment started at $(date)"
@@ -27,46 +21,42 @@ jobs:
           echo "Branch: ${{ github.ref_name }}"
           echo "Commit: ${{ github.sha }}"
 
-      # 3️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.15.1'
           cache: 'npm'
 
-      # 4️⃣ Install build tools for native modules
-      - name: Install build tools
-        run: sudo apt-get update && sudo apt-get install -y build-essential python3
-
-      # 5️⃣ Install dependencies
       - name: Install dependencies
         run: |
           echo "📦 Installing backend dependencies..."
-          npm ci
+          npm ci --ignore-scripts
           echo "✅ Backend dependencies installed successfully"
+        env:
+          NPM_CONFIG_IGNORE_SCRIPTS: true
 
-      # 6️⃣ Setup FCM key file from secret
       - name: Create FCM key file
         run: |
           echo "🔐 Creating FCM key file from secret"
           mkdir -p common/utils
-          echo "$FCM_KEY_JSON" > common/utils/fcmkey.json
+          echo '${{ secrets.FCM_KEY_JSON }}' > common/utils/fcmkey.json
           echo "✅ fcmkey.json created"
+        env:
+          FCM_KEY_JSON: ${{ secrets.FCM_KEY_JSON }}
 
-      # 7️⃣ Build NestJS monorepo
       - name: Build application (NestJS Monorepo)
         run: |
           echo "🔨 Building NestJS monorepo (user, admin, socket)"
-          npm run build
+          npx nest build
+        env:
+          NODE_ENV: production
 
-      # 8️⃣ Clean unnecessary files before deployment
       - name: Prepare deployment files
         run: |
           echo "🧹 Cleaning up files for deployment..."
           rm -rf .git node_modules/.cache
           echo "✅ Backend deployment files ready"
 
-      # 9️⃣ Fix remote permissions
       - name: Fix remote permissions
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -79,7 +69,6 @@ jobs:
             sudo chmod -R 755 /home/ubuntu/MatchcreatorsBackend/
             echo "✅ Permissions fixed successfully"
 
-      # 🔟 Deploy via Rsync
       - name: Deploy via Rsync 
         uses: easingthemes/ssh-deploy@main
         with:
@@ -91,7 +80,6 @@ jobs:
           BEFORE_RSYNC: echo "🚀 Starting file deployment to server..."
           AFTER_RSYNC: echo "✅ Files deployed successfully to server!"
 
-      # 1️⃣1️⃣ Install server dependencies
       - name: Install server dependencies
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -101,10 +89,9 @@ jobs:
           script: |
             echo "📦 Installing server dependencies..."
             cd /home/ubuntu/MatchcreatorsBackend/
-            npm ci --production
+            npm ci --production --ignore-scripts
             echo "✅ Server dependencies installed successfully"
 
-      # 1️⃣2️⃣ Restart backend application with PM2
       - name: Restart backend application
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -120,7 +107,6 @@ jobs:
             pm2 save
             echo "✅ Backend application restarted successfully"
 
-      # 1️⃣3️⃣ Health check
       - name: Health check
         uses: appleboy/ssh-action@v1.2.0
         with:
