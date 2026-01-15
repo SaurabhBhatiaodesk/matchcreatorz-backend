@@ -80,7 +80,7 @@ jobs:
           BEFORE_RSYNC: echo "🚀 Starting file deployment to server..."
           AFTER_RSYNC: echo "✅ Files deployed successfully to server!"
 
-      - name: Install server dependencies
+      - name: Install server dependencies & rebuild bcrypt
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -90,7 +90,9 @@ jobs:
             echo "📦 Installing server dependencies..."
             cd /home/ubuntu/MatchcreatorsBackend/
             npm ci --production --ignore-scripts
-            echo "✅ Server dependencies installed successfully"
+            echo "🔧 Rebuilding bcrypt for server environment..."
+            npm rebuild bcrypt --build-from-source
+            echo "✅ Server dependencies installed & bcrypt rebuilt successfully"
 
       - name: Restart backend application
         uses: appleboy/ssh-action@v1.2.0
