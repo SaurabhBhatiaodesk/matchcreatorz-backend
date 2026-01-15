@@ -1,0 +1,114 @@
+name: Deploy Matchcreators Backend
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deployment Info
+        run: |
+          echo "🚀 Deployment started"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Time: $(date)"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: |
+          echo "📦 Installing dependencies"
+          npm ci
+          echo "✅ Dependencies installed"
+
+      - name: Build NestJS applications
+        run: |
+          echo "🔨 Building NestJS monorepo (user, admin, socket)"
+          npm run build
+          echo "✅ Build completed"
+
+      - name: Cleanup before deploy
+        run: |
+          echo "🧹 Cleaning workspace"
+          rm -rf node_modules
+          rm -rf .git
+          echo "✅ Cleanup done"
+
+      - name: Prepare server directory & permissions
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ubuntu
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            echo "🔐 Preparing deployment directory"
+            mkdir -p /home/ubuntu/MatchcreatorsBackend
+            sudo chown -R ubuntu:ubuntu /home/ubuntu/MatchcreatorsBackend
+            chmod -R 755 /home/ubuntu/MatchcreatorsBackend
+            echo "✅ Directory ready"
+
+      - name: Deploy files via rsync
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.SERVER_IP }}
+          REMOTE_USER: ubuntu
+          TARGET: /home/ubuntu/MatchcreatorsBackend/
+          ARGS: >
+            -rlgoDzvc
+            --delete
+            --exclude=node_modules
+            --exclude=.git
+            --exclude=.github
+            --exclude=README.md
+
+      - name: Install production dependencies on server
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ubuntu
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            echo "📦 Installing production dependencies on server"
+            cd /home/ubuntu/MatchcreatorsBackend
+            npm ci --production
+            echo "✅ Server dependencies installed"
+
+      - name: Restart PM2 services
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ubuntu
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            echo "🔄 Restarting PM2 services"
+            cd /home/ubuntu/MatchcreatorsBackend
+
+            pm2 start ecosystem.config.js --env production || pm2 reload ecosystem.config.js
+            pm2 save
+            pm2 status
+
+      - name: Health check
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ubuntu
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            echo "🏥 Health check"
+            sleep 5
+            pm2 list
+            echo "🎉 Deployment completed successfully"
